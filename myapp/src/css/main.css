@@ -1,0 +1,356 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+body {
+  background-color: #DCE4F2;
+  color: #4C5573;
+}
+
+main {
+  width: 70%;
+  background-color: #F0F0F2;
+  border-radius: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+  border: 5px solid white;
+  -webkit-box-shadow: 4px 4px 10px #F0F0F2;
+          box-shadow: 4px 4px 10px #F0F0F2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1000px) {
+  main {
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.sec_left {
+  width: 25%;
+  border-right: 1px solid #4c557363;
+}
+
+@media (max-width: 700px) {
+  .sec_left {
+    width: 100%;
+  }
+}
+
+.sec_right {
+  width: 75%;
+}
+
+@media (max-width: 700px) {
+  .sec_right {
+    width: 100%;
+  }
+}
+
+.profile_part {
+  border-bottom: 1px solid #4c557363;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.profile_part img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 10px;
+}
+
+.profile_part .profile_text {
+  padding-left: 10px;
+}
+
+.profile_part .profile_text h6 {
+  color: #4c557363;
+}
+
+.header_part {
+  position: relative;
+  padding: 20px;
+}
+
+.header_part .search_part {
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 10px 10px 10px white;
+          box-shadow: 10px 10px 10px white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  position: absolute;
+  background-color: #DCE4F2;
+  right: 20px;
+  top: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 3px;
+}
+
+.header_part .search_part .search_icon {
+  width: 10%;
+  color: #4C5573;
+}
+
+.header_part .search_part .search_input {
+  width: 90%;
+  display: block;
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  text-indent: 10px;
+  background-color: #DCE4F2;
+}
+
+.navigate_part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navigate_part button {
+  margin: 5px;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  color: #4C5573;
+  cursor: pointer;
+  -webkit-box-shadow: 4px 4px 10px white;
+          box-shadow: 4px 4px 10px white;
+}
+
+.navigate_part .active {
+  background-color: #F2845C;
+  color: white;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.table .thead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 10px 10px 10px white;
+          box-shadow: 10px 10px 10px white;
+  overflow: hidden;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.table .thead div {
+  width: 14.28%;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #DCE4F2;
+}
+
+.table .tbody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.table .tbody .td {
+  width: 14.28%;
+  text-align: center;
+  padding: 25px 0;
+  border: 1px solid #4c557363;
+  border-top: 0;
+}
+
+.table .tbody .td .task_design {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.tasks_part {
+  margin-top: 20px;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 15px;
+  background-color: #DCE4F2;
+  -webkit-box-shadow: 10px 10px 10px white;
+          box-shadow: 10px 10px 10px white;
+  padding: 20px 10px;
+  padding-bottom: 5px;
+}
+
+.tasks_part #check_input {
+  display: none;
+}
+
+.tasks_part .plus_icon {
+  color: #4C5573;
+}
+
+.tasks_part .add_btn {
+  border: none;
+  outline: none;
+  background-color: #F0F0F2;
+  color: #4C5573;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tasks_part .add_btn span {
+  padding-left: 5px;
+}
+
+.task_form {
+  padding-top: 20px;
+  position: relative;
+  display: none;
+}
+
+.task_form input {
+  margin-top: 5px;
+  border-radius: 10px;
+  height: 30px;
+  border: none;
+  outline: none;
+  text-indent: 10px;
+}
+
+.task_form input[type="submit"] {
+  text-indent: 0;
+  color: #4C5573;
+  background-color: #F2845C;
+  color: white;
+}
+
+.task_form button {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  border: none;
+  outline: none;
+  color: #4C5573;
+  cursor: pointer;
+}
+
+.task_form button .times_icon {
+  color: #F2845C;
+}
+
+#check_input:checked ~ .task_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.to_do {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.to_do .mytasks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 5px 0;
+}
+
+.to_do .mytasks .task_time {
+  color: #F2845C;
+  margin-left: 2px;
+}
+
+.to_do .mytasks .circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #F2845C;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.completed {
+  margin-top: 20px;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 15px;
+  background-color: #DCE4F2;
+  -webkit-box-shadow: 10px 10px 10px white;
+          box-shadow: 10px 10px 10px white;
+  padding: 10px;
+  position: relative;
+}
+
+.completed .down_icon {
+  position: absolute;
+  right: 10px;
+}
+
+.completed .completed_task {
+  margin-top: 5px;
+  color: #F2845C;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,283 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,li{
+    list-style: none;
+}
+$color1:#4C5573;
+$color2:#F0F0F2;
+$color3:#DCE4F2;
+$color4:#F2845C;
+$color5:#F2C1AE;
+$color6:#4c557363;
+$color7:#dce4f271;
+
+body{
+    background-color: $color3;
+    color: $color1;
+}
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+main{
+    width: 70%;
+    // height: 500px;
+    background-color: $color2;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 4px 4px 10px $color2;
+    @include center;
+    @media (max-width:1000px){
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        border-radius: 0;
+    }
+    @media (max-width:700px){
+        flex-direction: column;
+    }
+}
+.sec_left{
+    width: 25%;
+    border-right: 1px solid $color6;
+    @media (max-width:700px){
+        width: 100%;
+    }
+}
+.sec_right{
+    width: 75%;
+    @media (max-width:700px){
+        width: 100%;
+    }
+}
+.profile_part{
+    border-bottom: 1px solid $color6;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    img{
+        width: 50px;
+        height: 50px;
+        display: block;
+        border-radius: 10px;
+    }
+    .profile_text{
+        padding-left: 10px;
+        h6{
+            color: $color6;
+        }
+    }
+}
+.header_part{
+    position: relative;
+    padding: 20px;
+    .search_part{
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 10px 10px 10px white;
+        display: flex;
+        width: 200px;
+        position: absolute;
+        background-color: $color3;
+        right:20px;
+        top: 20px;
+        align-items: center;
+        padding-left: 3px;
+        .search_icon{
+            width: 10%;
+            color: $color1;
+        }
+        .search_input{
+            width: 90%;
+            display: block;
+          
+            width:200px;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+           
+            text-indent: 10px;
+            background-color: $color3;
+          
+        }
+    }
+}
+.navigate_part{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    button{
+        margin: 5px;
+        border: none;
+        padding: 5px;
+        border-radius: 10px;
+        color: $color1;
+        cursor: pointer;
+        box-shadow: 4px 4px 10px white;
+    }
+    .active{
+        background-color: $color4;
+        color: white;
+    }
+}
+.table{
+margin-top: 20px;
+
+.thead{
+    
+    display: flex;
+    box-shadow: 10px 10px 10px white;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  
+}
+.thead div{
+    width: 14.28%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: $color3;
+}
+.tbody{
+    display: flex;
+    flex-wrap: wrap;
+.td{
+    width: 14.28%;
+    text-align: center;
+    padding: 25px 0;
+    border: 1px solid $color6;
+    border-top: 0;
+    .task_design{
+        background-color: white;
+        border-radius: 10px;
+    }
+}
+}
+
+}
+.tasks_part{
+    margin-top: 20px;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 15px;
+    background-color: $color3;
+    box-shadow:10px 10px 10px white;
+    padding: 20px 10px;
+    padding-bottom: 5px;
+    // padding-top: 20px;
+
+    #check_input{
+        display: none;
+    }
+    .plus_icon{
+        color: $color1;
+    }
+    .add_btn{
+        border: none;
+        outline: none;
+        background-color: $color2;
+        color: $color1;
+        padding: 10px 15px;
+        border-radius: 10px;
+        cursor: pointer;
+        span{
+            padding-left: 5px;
+        }
+    }
+}
+.task_form{
+   padding-top: 20px;
+    
+    position: relative;
+    display: none;
+    
+
+    input{
+        margin-top:5px;
+        border-radius: 10px;
+        height: 30px;
+        border: none;
+        outline: none;
+        text-indent: 10px;
+    }
+    input[type="submit"]{
+        text-indent: 0;
+        color: $color1;
+        background-color: $color4;
+        color: white;
+    }
+    button{
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        border: none;
+        outline: none;
+        color: $color1;
+        cursor: pointer;
+        .times_icon{
+            color: $color4;
+        }
+       
+    }
+}
+#check_input:checked~.task_form{
+    display:flex;
+    flex-direction: column;
+}
+.to_do{
+    width: 100%;
+    margin-top: 20px;
+    .mytasks{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 5px 0;
+        .task_time{
+            color: $color4;
+            margin-left: 2px;
+        }
+        .circle{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border:1px solid $color4;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+    }
+   
+}
+.completed{
+    margin-top: 20px;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 15px;
+    background-color: $color3;
+    box-shadow: 10px 10px 10px white;
+    padding:10px;
+    position: relative;
+   
+    .down_icon{
+        position: absolute;
+        right:10px;
+        
+    }
+    .completed_task{
+        margin-top: 5px;
+        color: $color4;
+    }
+}
